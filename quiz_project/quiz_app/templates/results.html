@@ -1,0 +1,15 @@
+<!-- quiz_app/templates/results.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Quiz Results</h2>
+<ul>
+    {% for result in quiz_results %}
+    <li>{{ result.quiz.question }} - Score: {{ result.score }}/5</li>
+    {% endfor %}
+</ul>
+<p>Average Score: {{ average_score }}/5</p>
+<p>Highest Score: {{ highest_score }}/5</p>
+<p>Lowest Score: {{ lowest_score }}/5</p>
+{% endblock %}
